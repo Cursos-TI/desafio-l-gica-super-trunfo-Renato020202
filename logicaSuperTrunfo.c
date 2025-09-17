@@ -141,8 +141,11 @@ printf ("\n");
 
 // menu interativo 
  int escolhajogador;
+  int resultado;
+  int resultado2;
+ 
 
-printf(" escolha um dos atributos de comparação :\n");
+printf("  escolha o primeiro atributos de comparação :\n");
 printf("1. area\n");
 printf("2. população\n");
 printf("3. PIB\n");
@@ -158,17 +161,14 @@ switch (escolhajogador)
 {
 case 1:
     printf( " você escolheu a area\n");
-   if (area > area2) {
-    printf( "******parabens carta 1 venceu******\n");
-    printf(" cidada : %s\n", cidade);
-    printf(" area da carta  1 : %.5f km\n", area);
-     printf(" area da carta 2 : %.5f km\n", area2);
+    resultado =  area > area2 ? 1 : 0;  
+   if ( resultado = 1 ) {
+    printf( "******parabens carta 1 venceu a primeira comparação******\n");
+   
 
-   }else if ( area < area2){
-    printf( "*******parabens carta 2 venceu******\n");
-    printf(" cidada : %s\n", cidade2);
-    printf(" area da carta  1 : %.5f km\n", area);
-     printf(" area da carta 2 : %.5f km\n", area2);
+   }else if ( resultado = 0){
+    printf( "*******parabens carta 2 venceu a primeira comparação******\n");
+    
 
    }else {
     printf(" o jogo impatou\n");
@@ -177,18 +177,14 @@ case 1:
 
 case 2:
     printf( " você escolheu a população\n");
-   if (população > população2) {
-    printf( "*******parabens carta 1 venceu*******\n");
-    printf(" cidada : %s\n", cidade);
-    printf(" população carta  1 : %lu\n", população);
-     printf(" população da carta 2 : %lu\n", população2);
+    resultado =  população > população2 ? 1 : 0;
+   if (resultado = 1) {
+    printf( "*******parabens carta 1 venceu a primeira comparação*******\n");
+    
 
-   }else if ( população < população2){
-   printf( "******parabens carta 2 venceu*****\n");
-    printf(" cidada : %s\n", cidade2);
-    printf(" população carta  1 : %lu\n", população);
-     printf(" população da carta 2 : %lu\n", população2);
-
+   }else if ( resultado = 0 ){
+   printf( "******parabens carta 2 venceu a primeira comparação*****\n");
+    
    }else {
     printf(" o jogo impatou\n");
    }
@@ -196,17 +192,14 @@ case 2:
     break;
 case 3:
     printf( " você escolheu o PIB\n");
-   if (PIB > PIB2) {
-    printf( "********parabens carta 1 venceu*******\n");
-    printf(" cidada : %s\n", cidade);
-    printf(" o PIB da carta  1 : %.5f\n", PIB);
-     printf(" area da carta 2 : %.5f\n", PIB2);
+    resultado =  PIB > PIB2 ? 1 : 0;
+   if ( resultado = 1) {
+    printf( "********parabens carta 1 venceu a primeira comparação*******\n");
+   
 
-   }else if ( PIB < PIB2){
-    printf( "*******parabens carta 2 venceu*****\n");
-    printf(" cidada : %s\n", cidade2);
-    printf(" area da carta  1 : %.5f\n", PIB);
-     printf(" area da carta 2 : %.5f\n", PIB2);
+   }else if ( resultado = 0){
+    printf( "*******parabens carta 2 venceu a primeira comparação*****\n");
+    
 
    }else {
     printf(" o jogo impatou\n");
@@ -216,37 +209,32 @@ case 3:
 
 case 4:
     printf( " você escolheu o ponto turistico\n");
-   if (pontoturistico > pontoturistico2) {
-    printf( "********parabens carta 1 venceu*********\n");
-    printf(" cidada : %s\n", cidade);
-    printf(" ponto turistico da carta  1 : %d\n", pontoturistico);
-     printf(" ponto turistico carta 2 : %d\n", pontoturistico2);
+    resultado =  pontoturistico > pontoturistico2 ? 1 : 0;
+   if ( resultado = 1) {
+    printf( "********parabens carta 1 venceu a primeira comparação*********\n");
+    
 
-   }else if (pontoturistico < pontoturistico2) {
-    printf( "*********parabens carta 2 venceu********\n");
-    printf(" cidada : %s\n", cidade2);
-    printf(" ponto turistico da carta  1 : %d\n", pontoturistico);
-     printf(" ponto turistico da carta 2 : %d\n", pontoturistico2);
+   }else if (resultado = 0) {
+    printf( "*********parabens carta 2 venceu a primeira comparação********\n");
+    
 
 
    }else {
     printf(" o jogo impatou\n");
 
    }
+   break;
 
 case 5:
     printf( " você escolheu a densidade populacional\n");
-   if (densidadepopulacional < densidadepopulacional2) {
-    printf( "**********parabens carta 1 venceu*********\n");
-    printf(" cidada : %s\n", cidade);
-    printf(" a densidade populacional da carta  1 : %.2f\n",densidadepopulacional);
-     printf(" a densidade populacional da carta 2 : %.2f\n", densidadepopulacional2);
+    resultado =  densidadepopulacional < densidadepopulacional2 ? 1 : 0;
+   if ( resultado = 1) {
+    printf( "**********parabens carta 1 venceu a primeira comparação*********\n");
+    
 
-   }else if(densidadepopulacional > densidadepopulacional2) {
-    printf( "**********parabens carta 2 venceu**********\n");
-    printf(" cidada : %s\n", cidade2);
-    printf(" a densidade populacional da carta  1 : %.2ff\n",densidadepopulacional);
-     printf(" a densidade populacional da carta 2 : %.2f\n", densidadepopulacional2);
+   }else if(resultado = 0) {
+    printf( "**********parabens carta 2 venceu a primeira comparação**********\n");
+    
 
 
    }else {
@@ -259,6 +247,145 @@ case 5:
 default: printf(" opção invalida\n");
     break;
 }
+
+printf("\n");
+
+
+// menu interativo 
+ int escolhajogador2;
+
+printf(" escolha o segundo atributos de comparação :\n");
+printf("1. area\n");
+printf("2. população\n");
+printf("3. PIB\n");
+printf("4. ponto turistico\n");
+printf("5. densidade populacional\n");
+printf(" escolha uma das opções de 1 a 5\n");
+scanf("%d", &escolhajogador2);
+printf("\n");
+// cada case corresponte um atributo e sua comparação
+// mostra dos resultados
+
+
+if ( escolhajogador == escolhajogador2) {
+  printf(" voce escolheu o mesmo atributo que o primeiro\n");
+
+} else {
+
+  switch (escolhajogador2)
+{
+case 1:
+    printf( " você escolheu a area\n");
+    resultado2 =  area > area2 ? 1 : 0;  
+   if ( resultado2 = 1 ) {
+    printf( "******parabens carta 1 venceu a primeira comparação******\n");
+    
+
+   }else if ( resultado2 = 0){
+    printf( "*******parabens carta 2 venceu a primeira comparação******\n");
+   
+   }else {
+    printf(" o jogo impatou\n");
+   }
+   break;
+
+case 2:
+    printf( " você escolheu a população\n");
+    resultado2 =  população > população2 ? 1 : 0;
+   if (resultado2 = 1) {
+    printf( "*******parabens carta 1 venceu a primeira comparação*******\n");
+   
+   }else if ( resultado2 = 0 ){
+   printf( "******parabens carta 2 venceu a primeira comparação*****\n");
+    
+   }else {
+    printf(" o jogo impatou\n");
+   }
+
+    break;
+case 3:
+    printf( " você escolheu o PIB\n");
+    resultado2 =  PIB > PIB2 ? 1 : 0;
+   if ( resultado2 = 1) {
+    printf( "********parabens carta 1 venceu a primeira comparação*******\n");
+    
+
+   }else if ( resultado2 = 0){
+    printf( "*******parabens carta 2 venceu a primeira comparação*****\n");
+   
+
+   }else {
+    printf(" o jogo impatou\n");
+
+   }
+   break;
+
+case 4:
+    printf( " você escolheu o ponto turistico\n");
+    resultado2 =  pontoturistico > pontoturistico2 ? 1 : 0;
+   if ( resultado2 = 1) {
+    printf( "********parabens carta 1 venceu a primeira comparação*********\n");
+    
+
+   }else if (resultado2 = 0) {
+    printf( "*********parabens carta 2 venceu a primeira comparação********\n");
+    
+
+   }else {
+    printf(" o jogo impatou\n");
+
+   }
+   break;
+
+case 5:
+    printf( " você escolheu a densidade populacional\n");
+    resultado2 =  densidadepopulacional < densidadepopulacional2 ? 1 : 0;
+   if ( resultado2 = 1) {
+    printf( "**********parabens carta 1 venceu a primeira comparação*********\n");
+    
+
+   }else if(resultado2 = 0) {
+    printf( "**********parabens carta 2 venceu a primeira comparação**********\n");
+    
+
+
+   }else {
+    printf(" o jogo impatou\n");
+
+   }
+   break;
+
+
+default: printf(" opção invalida\n");
+    break;
+}
+
+}
+printf("\n");
+
+if ( escolhajogador == escolhajogador2) {
+  printf(" por favor refaça\n");
+ } else if ( resultado && resultado2) {
+  printf("##### RESULTADO FINAL #####\n");
+  printf("\n");
+  printf("*******parabens carta 1 venceu o jogo********\n");
+  printf(" cidade da carta 1 : %s\n", cidade);
+  printf(" carta 1 adquiriu 2 acertos");
+  
+} else if ( resultado != resultado2) {
+  printf("##### RESULTADO FINAL #####\n");
+    printf("\n");
+  printf(" o jogo empatou\n");
+  printf(" cada carta gerou 1 acerto\n");
+
+}else {
+  printf("##### RESULTADO FINAL #####\n");
+    printf("\n");
+  printf("****** parabens carta 2 venceu o jogo ******\n ");
+  printf(" cidade da carta 2 : %s\n", cidade2);
+  printf(" carta 2 adquiriu 2 acertos\n");
+}
+
 
     return 0;
 

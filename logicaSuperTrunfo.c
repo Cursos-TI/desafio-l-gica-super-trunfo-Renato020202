@@ -155,7 +155,7 @@ printf(" escolha uma das opções de 1 a 5\n");
 scanf("%d", &escolhajogador);
 printf("\n");
 // cada case corresponte um atributo e sua comparação
-// mostra dos resultados
+
 
 switch (escolhajogador)
 {
@@ -264,9 +264,9 @@ printf(" escolha uma das opções de 1 a 5\n");
 scanf("%d", &escolhajogador2);
 printf("\n");
 // cada case corresponte um atributo e sua comparação
-// mostra dos resultados
 
 
+// condição caso escolha o mesmo atributo seguido
 if ( escolhajogador == escolhajogador2) {
   printf(" voce escolheu o mesmo atributo que o primeiro\n");
 
@@ -361,8 +361,10 @@ default: printf(" opção invalida\n");
 }
 
 }
-printf("\n");
+// resultado final do jogo em relação ao numero de  acertos
 
+printf("\n");
+// relembrando que se escolher o mesmo atributo seguido tera que refazer
 if ( escolhajogador == escolhajogador2) {
   printf(" por favor refaça\n");
  } else if ( resultado && resultado2) {
